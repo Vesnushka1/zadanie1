@@ -33,6 +33,7 @@ export default {
   padding: 20px;
   margin: 10px;
   border: 2px solid black;
+  width: 500px;
 }
 .text-comm{
   margin: 10px 0;

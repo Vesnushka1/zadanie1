@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <div class="col">
       <h2>Сортировка и поиск</h2>
       <CommentsSorted @sendValue="updateValueSelect" :sortedOptions="sortedOptions"/>
@@ -88,5 +88,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: 240px;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
