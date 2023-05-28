@@ -1,8 +1,8 @@
 <template>
   <div class="comm">
-    <p>{{ comment.name }}</p>
-    <p>{{ comment.email }}</p>
-    <p>{{ comment.body }}</p>
+    <div class="text-comm"><strong>Name: </strong>{{ comment.name }}</div>
+    <div class="text-comm"><strong>Email: </strong>{{ comment.email }}</div>
+    <div class="text-comm"><strong>Comment: </strong>{{ comment.body }}</div>
     <my-button @click="delComment">Удалить</my-button>
   </div>
 </template>
@@ -33,5 +33,8 @@ export default {
   padding: 20px;
   margin: 10px;
   border: 2px solid black;
+}
+.text-comm{
+  margin: 10px 0;
 }
 </style>

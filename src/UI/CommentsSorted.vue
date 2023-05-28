@@ -1,7 +1,8 @@
 <template>
   <select @change="selectVal">
-    <option disabled selected>Выберите значение</option>
+    <option disabled selected>Выберите значение сортировки</option>
     <option v-for="option in sortedOptions" :value="option.value" :key="option.value"> {{ option.name }}</option>
+    <option>По умолчанию</option>
   </select>
 </template>
 
@@ -21,5 +22,7 @@ export default {
 </script>
 
 <style scoped>
-
+select{
+  margin-bottom: 20px;
+}
 </style>

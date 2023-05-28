@@ -1,10 +1,10 @@
 <template>
   <form class="formModal">
     <div class="content">
-      <input type="text" name="" id="" v-model="nameComment">
-      <input type="email" name="" id="" v-model="emailComment">
-      <input type="text" name="" id="" v-model="bodyComment">
-      <my-button @click='addComment'>Добавить</my-button>
+      <input placeholder="Введите имя" type="text" name="" id="" v-model="nameComment">
+      <input placeholder="Введите email" type="email" name="" id="" v-model="emailComment">
+      <input placeholder="Введите комментарий" type="text" name="" id="" v-model="bodyComment">
+      <my-button @click.prevent='addComment'>Добавить</my-button>
     </div>
     <button @click.prevent="closeWindow" class="btn-close">X</button>
 
@@ -35,6 +35,7 @@ export default {
       this.nameComment = ''
       this.emailComment = ''
       this.bodyComment = ''
+      this.closeWindow()
     },
     closeWindow(){
       this.$emit('close', false)

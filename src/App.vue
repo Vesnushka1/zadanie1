@@ -1,9 +1,12 @@
 <template>
   <div>
-    <CommentsSorted @sendValue="updateValueSelect" :sortedOptions="sortedOptions"/>
-    <!--это пропс :sortedOptions(так называется в другом компоненте пропс)="sortedOptions"-->
-    <SearchComments @searchValue="updateValueSearch"/>
-    <MyButton @click="openModal">Открыть модальное окно</MyButton>
+    <div class="col">
+      <h2>Сортировка и поиск</h2>
+      <CommentsSorted @sendValue="updateValueSelect" :sortedOptions="sortedOptions"/>
+      <SearchComments @searchValue="updateValueSearch"/>
+    </div>
+    <h2>Добавление персонажа</h2>
+    <MyButton @click.prevent="openModal">Добавить персонажа</MyButton>
     <dialog :open="openDialog">
         <ModalAdd @close="closeWind" @create="addComment"/>
     </dialog>
@@ -81,5 +84,9 @@ export default {
 </script>
 
 <style scoped>
-
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
 </style>

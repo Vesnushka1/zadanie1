@@ -1,5 +1,5 @@
 <template>
-  <input @input="searchValue" type="text">
+  <input placeholder="Поиск" @input="searchValue" type="text">
 </template>
 
 <script>
@@ -13,5 +13,8 @@ export default {
 </script>
 
 <style scoped>
-
+input{
+  width: 170px;
+  height: 25px;
+}
 </style>
